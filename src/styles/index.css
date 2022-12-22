@@ -1,0 +1,126 @@
+* {
+  /* border: 1px solid red; */
+}
+
+.page {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  background: #f8ebeb;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.table {
+  margin: 20px auto;
+  width: 50%;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 5px;
+  background: #ecc2c2;
+  border: 1px solid #ecc2c2;
+  color: white;
+}
+
+.table td {
+  margin: 0;
+  padding: 0 10px;
+  border-bottom: 1px solid #f8ebeb;
+  background-color: white;
+}
+
+.table__record {
+  display: grid;
+  grid-template-columns: 15% 15% auto 15%;
+  grid-template-rows: auto;
+}
+
+.table__about {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
+.table__eye {
+  text-align: right;
+}
+
+.popup {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 20%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.edit-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.edit-form__input {
+  padding: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #ecc2c2;
+  border-radius: 1px;
+  background-color: white;
+  font-family: helvetica neue,helvetica,arial,sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.edit-form__input:focus {
+  outline: 1px solid #ecc2c2;
+}
+
+.edit-form__input_textarea {
+  resize: vertical;
+}
+
+.edit-form__submit {
+  margin-top: 20px;
+  background-color: #ecc2c2;
+  color: white;
+  height: 40px;
+  border: 2px solid #ecc2c2;
+  border-radius: 2px;
+  font-family: helvetica neue,helvetica,arial,sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.edit-form__submit:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.popup__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  color: #ecc2c2;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
